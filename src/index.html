@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fav -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/favico.ico">
+  </head>
+
+  <body id="body">
+    <header class="header" id="header">
+      <div class="header__inner">
+        <a href="#body" class="header__logo" tabindex="0">
+          <img src="./assets/images/logo.png" alt="Alpanect" />
+        </a>
+
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__list-item">
+              <a href="#about" class="header__list-link scrolling-link">About us</a>
+            </li>
+            <li class="header__list-item">
+              <a href="#solutions" class="header__list-link scrolling-link"
+                >Platform Solutions</a
+              >
+            </li>
+            <li class="header__list-item">
+              <a href="#careers" class="header__list-link scrolling-link">Careers</a>
+            </li>
+            <li class="header__list-item">
+              <a href="#contacts" class="header__list-link scrolling-link">Contact</a>
+            </li>
+          </ul>
+          <button class="header__theme-button" id="theme-swapper" aria-label="swap theme" title="swap theme">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href="./assets/images/sprite.svg#theme" />
+            </svg>
+          </button>
+          <button class="header__main-button main-button main-button-dark">
+            Book a demo
+          </button>
+          <button type="button" id="burger" class="header__burger" aria-label="burger menu" title="burger-menu">
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+          </button>
+        </nav>
+      </div>
+      <div class="header__mobile-nav" id="mobile-nav">
+        <div class="container">
+          <ul class="header__list">
+            <li class="header__list-item">
+              <a href="#about" class="header__list-link scrolling-link">About us</a>
+            </li>
+            <li class="header__list-item">
+              <a href="#solutions" class="header__list-link scrolling-link"
+                >Platform Solutions</a
+              >
+            </li>
+            <li class="header__list-item">
+              <a href="#careers" class="header__list-link scrolling-link">Careers</a>
+            </li>
+            <li class="header__list-item">
+              <a href="#contacts" class="header__list-link scrolling-link">Contact</a>
+            </li>
+            <li class="header__list-item">
+              <button class="header__main-button main-button main-button-dark">
+                Book a demo
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero__inner">
+          <h1 class="hero__title">
+            Your Business.<br />
+            We Make it Fintech.
+          </h1>
+          <p class="hero__subtitle section-subtitle">
+            Alphanect equips you with the financial technology to grow your
+            Wealth and Asset Management business while staying up-to-date with
+            changing investor demands.
+          </p>
+          <div class="hero__actions">
+            <button
+              class="hero__actions-button main-button main-button-dark truncate"
+            >
+              Book a demo
+            </button>
+            <p class="hero__actions-divider">or</p>
+            <button
+              class="hero__actions-button main-button main-button-light truncate"
+            >
+              Explore more
+            </button>
+          </div>
+
+          <div class="hero__cards">
+            <div class="hero__card">
+              <div class="hero__card-picture">
+                <img
+                  src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="Alpanect card"
+                />
+                <p class="hero__card-status">New</p>
+              </div>
+              <div class="hero__card-info">
+                <p class="hero__card-title">Senior Living</p>
+                <ul class="hero__card-list truncate">
+                  <li class="hero__card-item">Chemical manifactoring</li>
+                  <li class="hero__card-item">Europe</li>
+                  <li class="hero__card-item">Closed-ended fund</li>
+                </ul>
+              </div>
+              <nav class="hero__card-nav">
+                <div class="hero__card-nav-item">
+                  <p class="hero__card-heading truncate">Target size</p>
+                  <p class="hero__card-amount truncate">€ 500M</p>
+                </div>
+                <div class="hero__card-nav-item">
+                  <p class="hero__card-heading truncate">IRR</p>
+                  <p class="hero__card-amount truncate">7.0 %</p>
+                </div>
+                <div class="hero__card-nav-item">
+                  <p class="hero__card-heading truncate">Cash on cash</p>
+                  <p class="hero__card-amount truncate">5.0 %</p>
+                </div>
+                <div class="hero__card-nav-item">
+                  <p class="hero__card-heading truncate">Funded</p>
+                  <div class="hero__card-amount hero__card-amount_loading">
+                    <p class="truncate">80%</p>
+                    <svg class="loader">
+                      <circle
+                        class="loader__overlay"
+                        cx="6"
+                        cy="6"
+                        r="5"
+                      ></circle>
+                      <circle
+                        class="loader__circle"
+                        cx="6"
+                        cy="6"
+                        r="5"
+                      ></circle>
+                    </svg>
+                  </div>
+                </div>
+
+                <button class="hero__card-button" aria-label="refresh button" title="refresh button">
+                  <svg viewBox="0 0 24 24">
+                    <use xlink:href="./assets/images/sprite.svg#double-arrow" />
+                  </svg>
+                </button>
+              </nav>
+            </div>
+
+            <div class="hero__card">
+              <p class="hero__card-title hero__card-title_left">
+                Pinned documents
+              </p>
+              <ul class="hero__documents">
+                <li class="hero__documents-item">
+                  <a download href="./assets/files/4.txt" class="hero__documents-image">
+                    <svg viewBox="0 0 512 512">
+                      <use xlink:href="./assets/images/sprite.svg#document" />
+                    </svg>
+                  </a>
+                  <div class="hero__documents-info">
+                    <a download href="./assets/files/4.txt"  class="hero__documents-title truncate">
+                      Subscription Agreement
+                    </a>
+                    <a download href="./assets/files/4.txt"  class="hero__documents-text truncate">
+                      Agreement of terms of investment
+                      <span class="hero__documents-time">Feb 21, 2021</span>
+                    </a>
+                  </div>
+                </li>
+                <li class="hero__documents-item">
+                  <a download href="./assets/files/2.txt" class="hero__documents-image">
+                    <svg viewBox="0 0 512 512">
+                      <use xlink:href="./assets/images/sprite.svg#document" />
+                    </svg>
+                  </a>
+                  <div class="hero__documents-info">
+                    <a download href="./assets/files/2.txt" class="hero__documents-title truncate">
+                      Fundraising progress Jul 2021
+                    </a>
+                    <a download href="./assets/files/2.txt"  class="hero__documents-text truncate"
+                      >Aug 01, 2021</
+                    >
+                  </div>
+                </li>
+                <li class="hero__documents-item">
+                  <a download href="./assets/files/3.txt" class="hero__documents-image">
+                    <svg viewBox="0 0 512 512">
+                      <use xlink:href="./assets/images/sprite.svg#document" />
+                    </svg>
+                  </a>
+                  <div class="hero__documents-info">
+                    <a download href="./assets/files/3.txt" class="hero__documents-title truncate">Teaser (EN)</a>
+                    <a download href="./assets/files/3.txt" class="hero__documents-text truncate">
+                      Quick introduction to senior living
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="container">
+        <div class="products__inner">
+          <p class="products__suptitle section-suptitle" id="about">
+            Our products
+          </p>
+          <h2 class="products__title section-title">
+            We build fintech platforms for you
+          </h2>
+
+          <div class="products__toggle">
+            <ul class="products__tabs">
+              <li class="products__item">
+                <button data-tab="1" class="products__button active">
+                  <svg
+                    class="products__icon"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 11C5 9.93913 5.42143 8.92172 6.17157 8.17157C6.92172 7.42143 7.93913 7 9 7H39C40.0609 7 41.0783 7.42143 41.8284 8.17157C42.5786 8.92172 43 9.93913 43 11V37C43 38.0609 42.5786 39.0783 41.8284 39.8284C41.0783 40.5786 40.0609 41 39 41H9C7.93913 41 6.92172 40.5786 6.17157 39.8284C5.42143 39.0783 5 38.0609 5 37V11Z"
+                    />
+                    <path d="M15 7V41" />
+                  </svg>
+                  <span class="products__label truncate">Products portfolio</span>
+                </button>
+              </li>
+              <li class="products__item">
+                <button data-tab="2" class="products__button">
+                  <svg
+                    class="products__icon"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 11C5 9.93913 5.42143 8.92172 6.17157 8.17157C6.92172 7.42143 7.93913 7 9 7H39C40.0609 7 41.0783 7.42143 41.8284 8.17157C42.5786 8.92172 43 9.93913 43 11V37C43 38.0609 42.5786 39.0783 41.8284 39.8284C41.0783 40.5786 40.0609 41 39 41H9C7.93913 41 6.92172 40.5786 6.17157 39.8284C5.42143 39.0783 5 38.0609 5 37V11Z"
+                    />
+                    <path d="M15 7V41" />
+                  </svg>
+                  <span class="products__label">Communication</span>
+                </button>
+              </li>
+              <li class="products__item">
+                <button data-tab="3" class="products__button">
+                  <svg
+                    class="products__icon"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 11C5 9.93913 5.42143 8.92172 6.17157 8.17157C6.92172 7.42143 7.93913 7 9 7H39C40.0609 7 41.0783 7.42143 41.8284 8.17157C42.5786 8.92172 43 9.93913 43 11V37C43 38.0609 42.5786 39.0783 41.8284 39.8284C41.0783 40.5786 40.0609 41 39 41H9C7.93913 41 6.92172 40.5786 6.17157 39.8284C5.42143 39.0783 5 38.0609 5 37V11Z"
+                    />
+                    <path d="M15 7V41" />
+                  </svg>
+                  <span class="products__label">Analysing</span>
+                </button>
+              </li>
+              <li class="products__item">
+                <button data-tab="4" class="products__button">
+                  <svg
+                    class="products__icon"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 11C5 9.93913 5.42143 8.92172 6.17157 8.17157C6.92172 7.42143 7.93913 7 9 7H39C40.0609 7 41.0783 7.42143 41.8284 8.17157C42.5786 8.92172 43 9.93913 43 11V37C43 38.0609 42.5786 39.0783 41.8284 39.8284C41.0783 40.5786 40.0609 41 39 41H9C7.93913 41 6.92172 40.5786 6.17157 39.8284C5.42143 39.0783 5 38.0609 5 37V11Z"
+                    />
+                    <path d="M15 7V41" />
+                  </svg>
+                  <span class="products__label">Investment process</span>
+                </button>
+              </li>
+              <li class="products__item">
+                <button data-tab="5" class="products__button">
+                  <svg
+                    class="products__icon"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 11C5 9.93913 5.42143 8.92172 6.17157 8.17157C6.92172 7.42143 7.93913 7 9 7H39C40.0609 7 41.0783 7.42143 41.8284 8.17157C42.5786 8.92172 43 9.93913 43 11V37C43 38.0609 42.5786 39.0783 41.8284 39.8284C41.0783 40.5786 40.0609 41 39 41H9C7.93913 41 6.92172 40.5786 6.17157 39.8284C5.42143 39.0783 5 38.0609 5 37V11Z"
+                    />
+                    <path d="M15 7V41" />
+                  </svg>
+                  <span class="products__label">Investor center</span>
+                </button>
+              </li>
+              <li class="products__item">
+                <button data-tab="6" class="products__button">
+                  <svg
+                    class="products__icon"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 11C5 9.93913 5.42143 8.92172 6.17157 8.17157C6.92172 7.42143 7.93913 7 9 7H39C40.0609 7 41.0783 7.42143 41.8284 8.17157C42.5786 8.92172 43 9.93913 43 11V37C43 38.0609 42.5786 39.0783 41.8284 39.8284C41.0783 40.5786 40.0609 41 39 41H9C7.93913 41 6.92172 40.5786 6.17157 39.8284C5.42143 39.0783 5 38.0609 5 37V11Z"
+                    />
+                    <path d="M15 7V41" />
+                  </svg>
+                  <span class="products__label">Pitch creator</span>
+                </button>
+              </li>
+            </ul>
+            <div class="products__image">
+              <div class="products__image-wrapper">
+                <img
+                  class="products-img active"
+                  src="./assets/images/tab.jpg"
+                  alt="Products portfolio"
+                  data-tab-content="1"
+                />
+                <img
+                  class="products-img"
+                  src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg"
+                  data-tab-content="2"
+                  alt="Communication"
+                />
+                <img
+                  class="products-img"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png"
+                  data-tab-content="3"
+                  alt="Analysing"
+                />
+                <img
+                  class="products-img"
+                  src="data:image/png;base64,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"
+                  data-tab-content="4"
+                  alt="Investment process"
+                />
+                <img
+                  class="products-img"
+                  src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
+                  data-tab-content="5"
+                  alt="Investor center"
+                />
+                <img
+                  class="products-img"
+                  src="./assets/images/products2.png"
+                  alt="Pitch creator"
+                  data-tab-content="6"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefit">
+      <div class="container">
+        <div class="benefit__inner" id="solutions">
+          <div class="benefit__info">
+            <span class="benefit__suptitle section-suptitle"
+              >mutual benefit</span
+            >
+            <h2 class="benefit__title section-title">
+              Full FinTech Transformation for Wealth & Asset Managers
+            </h2>
+            <p class="benefit__subtitle section-subtitle">
+              The platform solutions of Alphanect are designed to connect wealth
+              and asset managers with investors. Allow your clients to
+              experience the investment process at its best using simple and
+              intuitive tools.
+            </p>
+          </div>
+
+          <div class="benefit__data">
+            <div class="benefit__chart">
+              <p class="benefit__chart-title">Transactions</p>
+              <div class="benefit__details">
+                <ul class="benefit__aside">
+                  <li class="benefit__aside-item">
+                    <div class="benefit__aside-icon">
+                      <svg>
+                        <use
+                          xlink:href="./assets/images/sprite.svg#arrow-right"
+                        />
+                      </svg>
+                    </div>
+                    <p class="benefit__aside-date">20.01</p>
+                  </li>
+                  <li class="benefit__aside-item">
+                    <div class="benefit__aside-icon">
+                      <svg>
+                        <use
+                          xlink:href="./assets/images/sprite.svg#arrow-right"
+                        />
+                      </svg>
+                    </div>
+                    <p class="benefit__aside-date">09.12</p>
+                  </li>
+                  <li class="benefit__aside-item">
+                    <div class="benefit__aside-icon">
+                      <svg>
+                        <use
+                          xlink:href="./assets/images/sprite.svg#arrow-right"
+                        />
+                      </svg>
+                    </div>
+                    <p class="benefit__aside-date">23.11</p>
+                  </li>
+                </ul>
+
+                <div class="benefit__divider"></div>
+
+                <ul class="benefit__main">
+                  <li class="benefit__main-item">
+                    <div class="benefit__main-price">
+                      <p class="benefit__main-title">Top-up</p>
+                      <p class="benefit__main-amount">+ € 7,800,000</p>
+                    </div>
+                    <div class="benefit__main-description">
+                      You have invested € <br />
+                      7,800,000 in Senior Living.
+                    </div>
+                  </li>
+                  <li class="benefit__main-item">
+                    <div class="benefit__main-price">
+                      <p class="benefit__main-title">Top-up</p>
+                      <p class="benefit__main-amount">+ € 11,400,000</p>
+                    </div>
+                    <div class="benefit__main-description">
+                      You have invested € <br />
+                      11,400,000 in Senior Living.
+                    </div>
+                  </li>
+                  <li class="benefit__main-item">
+                    <div class="benefit__main-price">
+                      <p class="benefit__main-title">Initial investment</p>
+                      <p class="benefit__main-amount">+ € 12,400,000</p>
+                    </div>
+                    <div class="benefit__main-description">
+                      You have invested € <br />
+                      12,400,000 in Senior Living.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="benefit__total">
+              <p class="benefit__total-descr">Total commited capital</p>
+              <h3 class="benefit__total-price">€ 32,700,000</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fintech">
+      <div class="container">
+        <div class="fintech__inner">
+          <div class="fintech__info">
+            <p class="fintech__suptitle section-suptitle" id="careers">
+              Fintech leader
+            </p>
+            <h2 class="fintech__title section-title">
+              Be the leader in your field, don’t lag behind
+            </h2>
+          </div>
+          <div class="fintech__data">
+            <div class="fintech__item">
+              <div
+                class="fintech__item-cell fintech__item-cell_heading truncate"
+              ></div>
+              <div class="fintech__item-cell">
+                <p>Fundraising excellence</p>
+              </div>
+              <div class="fintech__item-cell">
+                <p>Capital markets prominence</p>
+              </div>
+              <div class="fintech__item-cell">
+                <p>Investor loyalty</p>
+              </div>
+              <div class="fintech__item-cell">
+                <p>Low-cost operations</p>
+              </div>
+            </div>
+            <div class="fintech__item active">
+              <div class="fintech__item-cell">
+                <h3 class="fintech__item-cell_heading">
+                  Fintech leaders
+                </h3>
+              </div>
+              <div class="fintech__item-cell">
+                <p>
+                  Automated information flow and continuous investor engagement
+                </p>
+              </div>
+              <div class="fintech__item-cell">
+                <p>
+                  High enterprise value and a strong signal for future growth
+                </p>
+              </div>
+              <div class="fintech__item-cell">
+                <p>
+                  Investor insight based on analytics and high reinvestment rate
+                </p>
+              </div>
+              <div class="fintech__item-cell">
+                <p>Streamlined and scalable internal operations</p>
+              </div>
+            </div>
+            <div class="fintech__item">
+              <div class="fintech__item-cell">
+                <h3 class="fintech__item-cell_heading">
+                  Laggards
+                </h3>
+              </div>
+              <div class="fintech__item-cell">
+                <p>
+                  Time-consuming and work-intensive communication with
+                  investors.
+                </p>
+              </div>
+              <div class="fintech__item-cell">
+                <p>Low growth potential and negative outlook by the market</p>
+              </div>
+              <div class="fintech__item-cell">
+                <p>
+                  Limited feedback from investors and inability to adapt to
+                  changing investor preferences
+                </p>
+              </div>
+              <div class="fintech__item-cell">
+                <p>
+                  Disorganized processes, inefficient communication and high
+                  overhead
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="api">
+      <div class="container">
+        <div class="api__inner">
+          <div class="api__info">
+            <p class="api__suptitle section-suptitle" id="contacts">
+              FULLY CUSTOMIZABLE
+            </p>
+            <h2 class="api__title section-title">
+              Transform your processes without turmoil
+            </h2>
+          </div>
+
+          <div class="api__toggle">
+            <div class="api__tabs">
+              <div class="api__slider">
+                <div class="api__slider-handle" id="slider-handle"></div>
+              </div>
+              <button class="api__tab active" data-tab="1">
+                <span class="api__tab-heading">Easy to install</span>
+                <span class="api__tab-text">
+                  Out-of-the-box solution. Seamless API integration with your
+                  exisitng landscape.
+                </span>
+              </button>
+              <button class="api__tab" data-tab="2">
+                <span class="api__tab-heading">Simple to use</span>
+                <span class="api__tab-text">
+                  No unnecessary complexity. Optimized user experience.
+                  Intuitive and straightforward processes.
+                </span>
+              </button>
+              <button class="api__tab" data-tab="3">
+                <span class="api__tab-heading">Continuous support</span>
+                <span class="api__tab-text">
+                  A dedicated client manager for immediate support. Full set of
+                  supplementary services. Digital help and knowledge center.
+                </span>
+              </button>
+            </div>
+
+            <div class="api__description">
+              Out-of-the-box solution. Seamless API integration with your
+              exisitng landscape.
+            </div>
+
+            <div class="api__image">
+              <div class="api__image-wrapper active" data-tab-content="1">
+                <img
+                  class="api-img"
+                  src="./assets/images/api3.png"
+                  alt="Easy to install"
+                />
+              </div>
+              <div class="api__image-wrapper" data-tab-content="2">
+                <img
+                  class="api-img"
+                  src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg"
+                  alt="Simple to use"
+                />
+              </div>
+              <div class="api__image-wrapper" data-tab-content="3">
+                <img
+                  class="api-img"
+                  src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Eiffel_Tower_Vertical.JPG"
+                  alt="Continuous support"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="study">
+      <div class="container">
+        <div class="study__inner" id="imprint">
+          <div class="study__photo">
+            <img
+              class="study__image"
+              src="./assets/images/study.png"
+              alt="Alpanect person"
+            />
+
+            <div class="study__card">
+              <div class="study__quote">
+                <svg viewBox="0 0 34 28">
+                  <use xlink:href="./assets/images/sprite.svg#quoutes" />
+                </svg>
+              </div>
+              <p class="study__text">
+                Alphanect became an essential part of DLE‘s fundraising
+                powerhouse and gave us a strong competitive edge in a
+                traditional field like Real Estate.
+              </p>
+              <div class="study__person">
+                <div class="study__avatar">
+                  <img
+                    src="https://images.complex.com/complex/images/c_scale,f_auto,q_auto,w_1920/fl_lossy,pg_1/ok26lkxxcptihvwljzaw/girl-in-red?fimg-ssr-default"
+                    alt="Person"
+                  />
+                </div>
+                <div class="study__credentials">
+                  <p class="study__name">Maria Giulia Nazi</p>
+                  <div class="study__job">
+                    Head of Marketing at DLE Group AG
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="study__info">
+            <p class="study__suptitle section-suptitle">case study</p>
+            <h2 class="study__title section-title">
+              Investor Platform for DLE Group AG
+            </h2>
+            <div class="study__items">
+              <div class="study__item">
+                <h3 class="study__item-amount truncate">€2.5BN</h3>
+                <p class="study__item-description">fund volume on Alphanect</p>
+              </div>
+              <div class="study__item">
+                <h3 class="study__item-amount truncate">8 funds</h3>
+                <p class="study__item-description">managed via the platform</p>
+              </div>
+            </div>
+            <button class="study__button main-button main-button-dark">
+                <svg viewBox="0 0 12 14"  class="study__icon">
+                  <use xlink:href="./assets/images/sprite.svg#play" />
+                </svg>
+                <span>Watch video</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="privacy">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__container">
+            <p class="footer__text">
+              <span>Ready to get started?</span> Book a demo to kick off your
+              own FinTech transformation
+            </p>
+
+            <button class="footer__button main-button main-button-light-inline">
+              Book a demo
+            </button>
+          </div>
+
+          <nav class="footer__container">
+            <a href="#body" class="footer__logo">
+              <img src="./assets/images/light-logo.png" alt="Alpanect" />
+            </a>
+
+            <ul class="footer__items">
+              <li class="footer__item">
+                <a href="#about" class="footer__link scrolling-link">About us</a>
+              </li>
+              <li class="footer__item">
+                <a href="#solutions" class="footer__link scrolling-link">Platform Solutions</a>
+              </li>
+              <li class="footer__item">
+                <a href="#careers" class="footer__link scrolling-link">Careers</a>
+              </li>
+              <li class="footer__item">
+                <a href="#contacts" class="footer__link scrolling-link">Contact</a>
+              </li>
+              <li class="footer__item">
+                <a href="#imprint" class="footer__link scrolling-link">Imprint</a>
+              </li>
+              <li class="footer__item">
+                <a href="#privacy" class="footer__link scrolling-link">Privacy Policy</a>
+              </li>
+              <li class="footer__contancts-item">
+                <a href="https://linked.in" target="_blank" aria-label="linkedin" title="linkedin">
+                  <svg class="footer__item-icon">
+                    <use xlink:href="./assets/images/sprite.svg#linkedin" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="footer__container">
+            <div class="footer__copyright">
+              &copy; 2022 Alphanect. All Rights Reserved.
+            </div>
+
+            <address class="footer__contacts">
+              <p class="footer__contacts-item">
+                Alpenstrasse 11, 6300 Zug, Switzerland
+              </p>
+              <a class="footer__contacts-item" href="mailto:info@alphanect.com">
+                info@alphanect.com
+              </a>
+              <a class="footer__contacts-item" href="tel:+41798866600">
+                +41 79 886 66 00
+              </a>
+            </address>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button class="pageup" aria-label="pageup" title="pageup" id="go-up">
+      <svg  viewBox="0 0 24 24">
+        <use xlink:href="./assets/images/sprite.svg#up" />
+      </svg>
+    </button>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

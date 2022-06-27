@@ -1,0 +1,302 @@
+.study {
+    padding-top: 157px;
+    padding-bottom: 217px;
+
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__quote {
+        width: 32px;
+        margin-bottom: 24px;
+    }
+
+    &__photo {
+        position: relative;
+        width: 704px;
+        height: 434px;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        background-color: #ECF6FC;
+        background-image: url(../images/study-bg.svg);
+    }
+
+    &__card {
+        position: absolute;
+        left: 104px;
+        right: 104px;
+        bottom: -88px;
+
+        background: var(--benefit-data-background);
+        transition: all var(--transition) linear;
+        padding: 32px;
+        border-radius: 8px;
+
+        box-shadow: 0px 0px 2px rgba(15, 23, 42, 0.2), 0px 20px 25px -5px rgba(15, 23, 42, 0.04), 0px 8px 10px -6px rgba(15, 23, 42, 0.04);
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--secondary);
+        margin-bottom: 24px;
+        transition: all var(--transition) linear;
+
+        @include line-clamp(3);
+    }
+
+    &__person {
+        display: flex;
+        align-items: center;
+    }
+
+    &__avatar {
+        width: 56px;
+        height: 56px;
+        border-radius: 100%;
+        overflow: hidden;
+        margin-right: 16px;
+        flex-shrink: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__credentials {
+        // 100% of block's width - person's avatar - gap between the avatar and credentials
+        max-width: calc(100% - 56px - 24px);
+    }
+
+    &__name {
+        @include truncate;
+        display: block;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 26px;
+        color: var(--primary);
+        transition: all var(--transition) linear;
+    }
+
+    &__job {
+        display: block;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--secondary);
+        transition: all var(--transition) linear;
+
+        @include line-clamp(2);
+    }
+
+    &__info {
+        max-width: 392px;
+        text-align: left;
+    }
+
+    &__suptitle {
+        @include truncate;
+        letter-spacing: 4px;
+    }
+
+    &__title {
+        @include line-clamp(3);
+        letter-spacing: -0.6px;
+    }
+
+    &__item {
+        margin-bottom: 24px;
+
+        &:first-child {
+            .study__item-amount {
+                border-top: 1px solid #EAEAEC;
+                margin-top: 40px;
+                padding-top: 40px;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 40px;
+        }
+
+        &-amount {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 36px;
+            letter-spacing: -0.4px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+    
+        &-description {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: var(--secondary);
+            
+            @include line-clamp(2);
+        }
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        min-width: 158px;
+        min-height: 48px;
+        padding: 0 24px;
+
+        p {
+            @include truncate;
+            
+            max-width: calc(100% - 12px);
+        }
+    }
+
+    &__icon {
+        display: flex;
+        width: 12px;
+        margin-right: 13px;
+        flex-shrink: 0;
+
+        svg {
+            width: 100%;
+        }
+    }
+}
+
+@include media('<=desktop') {
+    .study {
+        &__photo {
+            max-width: 48%;
+        }
+
+        &__info {
+            max-width: 48%;
+        }
+
+        &__card {
+            left: 50px;
+            right: 50px;
+        }
+    }
+}
+
+@include media('<=sm-desktop') {
+    .study {
+        padding: 80px 0;
+
+        &__inner {
+            flex-direction: column;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        &__photo {
+            max-width: 100%;
+            width: unset;
+            margin: 0 auto;
+        }
+
+        &__info {
+            padding-top: 120px; 
+            max-width: 100%;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        &__item {
+            &:first-child {
+                .study__item-amount {
+                    padding-top: 20px;
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        &__button {
+            margin: 0 auto;
+        }
+    }
+}
+
+@include media('<=tablet') {
+    .study {
+        &__inner {
+            max-width: 100%;
+        }
+    }
+}
+
+@include media('<=mobile') {
+    .study {
+        &__inner {
+            max-width: 100%;
+        }
+
+        &__card {
+            padding: 20px;
+            left: 20px;
+            right: 20px;
+        }
+    }
+}
+
+@include media('<=sm-mobile') {
+    .study {
+        padding: 45px 0;
+
+        &__photo {
+            height: fit-content;
+        }
+
+        &__quote {
+            margin-bottom: 18px;
+        }
+
+        &__text {
+            font-size: 1.3rem;
+            line-height: 20px;
+            margin-bottom: 18px;
+        }
+
+        &__avatar {
+            width: 42px;
+            height: 42px;
+        }
+
+        &__name {
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+        }
+
+        &__job {
+            font-size: 1.1rem;
+            line-height: 1.5rem;
+        }
+
+        &__card {
+            position: static;
+            margin-top: 32px;
+        }
+
+        &__info {
+            padding-top: 30px; 
+        }
+    }
+}

@@ -1,0 +1,167 @@
+:root {
+  // metrics
+  --header-height: 88px;
+  --transition: .3s;
+
+  // colors
+  --white: #fff;
+  --primary: #0F172A;
+  --secondary: #475569;
+  --background-color: #fff;
+  --suptitle: #2d61c0;
+  --light-label: #64748B;
+
+  --main-btn-dark-bg: var(--primary);
+  --main-btn-dark-hover-bg: #111c34;
+
+  --main-btn-light-border: rgba(15, 23, 42, 0.08);
+  --main-btn-light-color: var(--primary);
+    
+  --main-btn-light-inline-color: #111725;
+  --main-btn-light-inline-bg: #fff;
+  --main-btn-light-inline-bg-hover: rgb(184, 184, 184);
+
+  // Sections
+  // Header
+  --header-background: #fff;
+  --theme-btn-color: var(--primary);
+  --theme-btn-hover: #fff;
+
+  // Hero
+  // --hero-gradient: radial-gradient(50.07% 181.89% at 0% 0%, #FFFFFF 0%, rgba(255, 255, 255, 0.991353) 6.67%, rgba(255, 255, 255, 0.96449) 13.33%, rgba(255, 255, 255, 0.91834) 20%, rgba(255, 255, 255, 0.852589) 26.67%, rgba(255, 255, 255, 0.768225) 33.33%, rgba(255, 255, 255, 0.668116) 40%, rgba(255, 255, 255, 0.557309) 46.67%, rgba(255, 255, 255, 0.442691) 53.33%, rgba(255, 255, 255, 0.331884) 60%, rgba(255, 255, 255, 0.231775) 66.67%, rgba(255, 255, 255, 0.147411) 73.33%, rgba(255, 255, 255, 0.0816599) 80%, rgba(255, 255, 255, 0.03551) 86.67%, rgba(255, 255, 255, 0.0086472) 93.33%, rgba(255, 255, 255, 0) 100%);
+  --hero-background: url('../images/hero-background.svg');
+  --card-border: #DDDae5;
+  --card-text: #222;
+  --card-list: #444;
+  --card-document-title: #363636;
+  --card-button: #F4F3F4;
+  --hero-card-heading: #696969;
+  --hero-document-text: #696969;
+  --hero-divider-color: #445574;
+
+  // Benefit
+  --benefit-background-img: url('../images/benefit-bg.svg');
+  --benefit-background-color: #ECF6FC;
+  --benefit-data-background: #fff;
+
+  // Fintech
+  --fintech-cell: #fff;
+  --fintech-active-height: 188px;
+  --fintech-active-opacity: 0.25;
+  --fintech-item-border: #EAEAEC;
+
+
+  // Api
+  --api-background: #F9FBFD;
+  --slider-bg: #E4F0FB;
+
+  // Footer
+  --footer-background: linear-gradient(180deg, #151923 0%, #202737 100%)
+}
+
+:focus-visible {
+  box-shadow: 0 0 0 3px rgb(81, 84, 163);
+  outline: none;
+}
+
+button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(81, 84, 163);
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  // scroll-behavior: smooth;
+  // scroll-padding-top: 100px;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  // overflow-x: hidden;
+  background: var(--background-color);
+  font-family: "Inter", system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.6rem;
+
+  // transition: background var(--transition) linear;
+
+  &.dark {
+    --background-color: #0F172A;
+    --header-background: #09101f;
+    --primary: #fff;
+    --secondary: #f0f0f0;
+    --white: #0F172A;
+    --suptitle: #fff;
+    --light-label: #c2c2c2;
+
+    // main button
+    --main-btn-dark-bg: #0d265b;
+    --main-btn-dark-hover-bg: #071d4d;
+
+    --main-btn-light-border: #ebebeb;
+    --main-btn-light-color: #ebebeb;
+    
+    --main-btn-light-inline-color: #111725;
+    --main-btn-light-inline-bg: #fff;
+    --main-btn-light-inline-bg-hover: rgb(184, 184, 184);
+
+    // Sections
+    // header
+    --theme-btn-color: var(--primary);
+    --theme-btn-hover: #0F172A;
+
+    // hero
+    --hero-background: url('https://tailwindcss.com/_next/static/media/hero-dark@90.a7a063e8f9d179fbd72b0b735c5797b7.jpg');
+    --card-border: #060e21;
+    --card-text: #fff;
+    --card-list: #fff;
+    --card-document-title: #fff;
+    --card-button: #060e21;
+    --hero-card-heading: #fff;
+    --hero-document-text: #fff;
+    --hero-divider-color: #fff;
+
+    // benefit
+    --benefit-background-img: url('https://tailwindcss.com/_next/static/media/hero-dark@90.a7a063e8f9d179fbd72b0b735c5797b7.jpg');
+    --benefit-background-color: var(--background-color);
+    --benefit-data-background: #040b1b;
+
+    // fintech
+    --fintech-cell: var(--background-color);
+    --fintech-active-height: 50%;
+    --fintech-active-opacity: 0.15;
+    --fintech-item-border: #050a17;
+
+    // api
+    --api-background: #0d1426;
+    --slider-bg: rgb(170, 170, 170);
+
+    // footer
+    --footer-background: linear-gradient(180deg, #0d1426 0%, #09101f 100%)
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1272px;
+  padding: 0 24px;
+  margin: 0 auto;
+
+  @include media('<=mobile') {
+    padding: 0 14px;
+  }
+}

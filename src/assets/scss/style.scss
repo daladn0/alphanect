@@ -1,0 +1,17 @@
+// Setting up
+@import './reset';
+@import './include-media';
+@import './global';
+@import './presets';
+@import './mixins';
+
+// Modules
+@import './modules/header';
+@import './modules/hero';
+@import './modules/products';
+@import './modules/benefit';
+@import './modules/fintech';
+@import './modules/api';
+@import './modules/study';
+@import './modules/footer';
+@import './modules/sidenav';

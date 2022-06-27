@@ -1,0 +1,230 @@
+.products {
+    padding-top: 364px;
+    padding-bottom: 160px;
+    max-width: 100vw;
+    overflow-x: hidden;
+
+    @include media('<=laptop') {
+        padding-top: 30px;
+        padding-bottom: 80px;
+    }
+        
+    @include media('<=mobile') {
+        padding-bottom: 30px;
+    }
+
+    &__suptitle {
+        @include media('<=tablet') {
+            text-align: center;
+        }
+    }
+
+    &__title {
+        margin-bottom: 64px;
+
+        @include media('<=tablet') {
+            margin-bottom: 24px;
+            text-align: center;
+        }
+    }
+
+    &__toggle {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+
+        @include media('<=tablet') {
+            flex-direction: column;
+        }
+    }
+
+    &__tabs {
+        width: 392px;
+        flex-shrink: 0;
+        margin-right: 24px;
+
+        @include media('<=laptop') {
+            width: 250px;
+        }
+
+        @include media('<=tablet') {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: 0;
+        }
+    }
+
+    &__item {
+        display: block;
+        width: 100%;
+        margin-bottom: 1.6rem;
+
+        @include media('<=tablet') {
+            width: 50%;
+            margin: 10px 0;
+        }
+        
+        @include media('<=mobile') {
+            width: 100%;
+            margin: 10px 0;
+        }
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: 100%;
+
+        border-radius: 8px;
+        transition: all .1s linear;
+
+        &:not(.active):hover {
+            background: rgba(rgb(141, 141, 141), .1);
+        }
+
+        &.active {
+
+            .products__icon {
+                path {
+                    stroke-width: 2px;
+                    stroke-linecap: round;
+                    stroke: #487EDF;
+    
+                    &:first-child {
+                        fill-opacity: 0.1;
+                        fill: #487EDF;
+                    }
+                }
+            }
+
+            .products__label {
+                color: var(--suptitle);
+            }
+        }
+    }
+
+    &__icon {
+        width: 48px;
+        height: 48px;
+        margin-right: 16px;
+        color: #64748B;
+
+        path {
+            stroke-width: 2px;
+            stroke-linecap: round;
+            stroke: #CBD5E1;
+            transition: all .1s linear;
+
+            &:first-child {
+                fill-opacity: 0.1;
+                fill: #CBD5E1;
+            }
+        }
+
+        @include media('<=tablet') {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__label {
+        @include truncate;
+
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 26px;
+        color: var(--light-label);
+        text-align: left;
+
+        @include media('<=tablet') {
+            font-size: 13px;
+            line-height: 20px;
+        }
+    }
+
+    &__image {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+        margin-top: -2px;
+        transition: all .1s linear;
+
+        @include media('<=tablet') {
+            margin-top: 80px;
+        }
+        
+        @include media('<=mobile') {
+            margin-top: 30px;
+        }
+
+        &-wrapper {
+            filter: drop-shadow(0px 0px 80px rgba(#487EDF, .2));
+
+            @include media('<=laptop') {
+                max-height: 300px;
+            }
+
+            @include media('<=tablet') {
+                max-height: unset;
+            }
+        }
+
+        img {
+            max-height: 601px;
+
+            @include media('<=laptop') {
+                max-height: 300px;
+            }
+
+            @include media('<=tablet') {
+                max-height: unset;
+                max-width: 100%;
+            }
+
+            border-radius: 12px;
+            transform: translateY(100px);
+            opacity: 0;
+            position: absolute;
+            width: 0;
+            height: 0;
+            transition: opacity .5s ease, transform .5s ease;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 267px;
+                max-height: 100%;
+
+                background: #487EDF;
+                opacity: 0.2;
+                filter: blur(224px);
+            }
+
+
+            &.active {
+                width: auto;
+                height: auto;
+
+                transform: translateY(0px);
+                opacity: 1;
+                position: static;
+            }
+        }
+    }
+}

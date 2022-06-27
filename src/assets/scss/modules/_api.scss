@@ -1,0 +1,281 @@
+.api {
+    background: var(--api-background);
+    transition: all var(--transition) linear;
+    padding: 80px 0;
+
+    &__info {
+        max-width: 808px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__suptitle {
+        letter-spacing: 4px;
+    }
+
+    &__title {
+        margin-bottom: 64px;
+        letter-spacing: -0.6px;
+    }
+
+    &__toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__tabs {
+        position: relative;
+        max-width: 496px;
+        padding-left: 27px;
+    }
+
+    &__description {
+        @include line-clamp(4);
+        transition: all .2s linear;
+
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        color: #64748B;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__slider {
+        width: 3px;
+        height: 100%;
+        border: 50px;
+        background: var(--slider-bg);
+        display: block;
+        border-radius: 50px;
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+        &-handle {
+            content: "";
+
+            width: 3px;
+            border: 50px;
+            background: #2d61c0;
+            display: block;
+            transition: all .1s linear;
+
+            border-radius: 50px;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__tab {
+        max-width: 100%;
+        margin-bottom: 32px;
+        cursor: pointer;
+        text-align: left;
+
+        &.active {
+            .api__tab {
+                &-heading {
+                    color: var(--suptitle);
+                }
+
+                &-text {
+                    color: var(--suptitle);
+                }
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &-heading {
+            @include truncate;
+
+            transition: all .2s linear;
+            display: block;
+            max-width: 100%;
+
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 26px;
+            color: var(--light-label);
+            margin-bottom: 8px;
+        }
+
+        &-text {
+            @include line-clamp(2);
+            transition: all .2s linear;
+
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
+            color: var(--light-label);
+        }
+    }
+
+    &__image {
+        position: relative;
+        width: 602px;
+        max-width: 50%;
+        height: 370px;
+
+        &-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            max-width: 100%;
+            max-height: 370px;
+            margin: 0 auto;
+
+            box-shadow: 0px 20px 25px -5px rgba(15, 23, 42, 0.04), 0px 8px 10px -6px rgba(15, 23, 42, 0.04);
+            filter: drop-shadow(0px 0px 224px rgba(#487EDF, .5));
+
+            .api-img {
+                width: 100%;
+                max-height: 370px;
+                object-fit: contain;
+            }
+
+            opacity: 0;
+            transform: translateY(100px);
+            position: absolute;
+
+            &.active {
+                width: fit-content;
+                height: fit-content;
+
+                transition: opacity .5s ease, transform .5s ease;
+
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+@include media('>desktop') {
+    .api {
+        &__description {
+            display: none;
+        }
+    }
+}
+
+@include media('<=desktop') {
+    .api {
+        &__toggle {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 100%;
+            padding: 0;
+            margin-bottom: 32px;
+        }
+
+        &__tab {
+            display: block;
+            margin-bottom: 0;
+            padding: 10px 15px;
+            background: rgb(237, 237, 237);
+            border-radius: 8px;
+            // margin-right: 8px;
+            // margin-bottom: 8px;
+            margin: 4px 4px;
+
+            &:last-child {
+                margin-right: 0;
+                margin-bottom: 4px;
+            }
+
+            &-heading {
+                margin-bottom: 0;
+            }
+
+            &-text {
+                display: none;
+            }
+
+            &.active {
+                background: #487EDF;
+                
+                .api__tab-heading {
+                    color: #fff;
+                }
+            }
+        }
+
+        &__slider {
+            display: none;
+        }
+
+        &__image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: unset;
+            max-width: unset;
+
+            &-wrapper {
+                transform: none;
+                top: unset;
+                left: unset;
+                max-width: unset;
+                max-height: unset;
+                width: unset;
+                height: unset;
+                position: absolute;
+                z-index: -1;
+                box-shadow: none;
+
+                filter: drop-shadow(0px 0px 54px rgba(#487EDF, .2));
+
+                .api-img {
+                    max-width: 100%;
+                    max-height: unset;
+                    aspect-ratio: 16/9;
+                    object-fit: contain;
+                }
+
+                &.active {
+                    transform: none;
+                    position: static;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}
+
+@include media('<=tablet') {
+    .api {
+        padding: 40px 0;
+    }
+}
+
+@include media('<=mobile') {
+    .api {
+        &__tab {
+            padding: 6px 12px;
+            
+            &-heading {
+                font-size: 13px;
+                line-height: 20px;
+            }
+        }
+    }
+}

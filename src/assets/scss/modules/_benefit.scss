@@ -1,0 +1,330 @@
+.benefit {
+    padding-bottom: 160px;
+
+    @include media('<=desktop') {
+        padding-bottom: 30px;
+    }
+
+    &__inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        padding: 80px;
+        background-color: var(--benefit-background-color);
+        background-image: var(--benefit-background-img);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 8px;
+        text-align: left;
+        transition: all var(--transition) linear;
+
+        @include media('<=desktop') {
+            flex-direction: column;
+            width: 100%;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        
+        @include media('<=mobile') {
+            padding: 14px 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &__info {
+        max-width: 520px;
+        margin-right: 130px;
+
+        @include media('<=desktop') {
+            max-width: 80%;
+            text-align: center;
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+
+        @include media('<=tablet') {
+            max-width: 90%;
+        }
+
+        @include media('<=mobile') {
+            max-width: 95%;
+            margin-bottom: 14px;
+        }
+    }
+
+    &__suptitle {
+        margin-bottom: 1.6rem;
+        font-weight: 600;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        display: block;
+
+        @include truncate;
+    }
+
+    &__title {
+        display: block;
+        margin-bottom: 1.6rem;
+        font-weight: 800;
+        letter-spacing: -0.6px;
+        color: var(--primary);
+        
+        @include line-clamp(2);
+    }
+
+    &__subtitle {
+        @include line-clamp(3);
+
+        text-align: left;
+        font-weight: 400;
+        color: var(--secondary);
+        letter-spacing: 0px;
+        font-size: 16px;
+        line-height: 24px;
+
+        @include media('<=desktop') {
+            text-align: center;
+        }
+    }
+
+    &__data {
+        display: block;
+
+        @include media('<=desktop') {
+            width: 100%;
+        }
+    }
+
+    &__chart {
+        position: absolute;
+        top: 32px;
+
+        width: 390px;
+        background: var(--benefit-data-background);
+        transition: all var(--transition) linear;
+        padding: 28px 10px 0px 22px;
+        border-radius: 8px;
+        box-shadow: 0px 20px 25px -5px rgba(15, 23, 42, 0.04), 0px 8px 10px -6px rgba(15, 23, 42, 0.04);
+        filter: drop-shadow(0px 0px 2px rgba(15, 23, 42, 0.2));
+
+        @include media('<=desktop') {
+            position: static;
+        }
+
+        @include media('<=desktop') {
+            width: 100%;
+            margin-right: 0;
+        }
+        
+        @include media('<=mobile') {
+            max-width: 95%;
+            margin: 0 auto;
+            padding: 14px 0;
+
+            background: none;
+            border-radius: 0;
+            filter: none;
+            box-shadow: none;
+        }
+
+        &-title {
+            @include truncate;
+
+            transition: all var(--transition) linear;
+            color: var(--card-text);
+            font-size: 1.6rem;
+            margin-bottom: 28px;
+            font-weight: 600;
+        }
+    }
+
+    &__details {
+        display: flex;
+        align-items: stretch;
+    }
+
+    &__aside {
+        display: flex;
+        flex-direction: column;
+        max-width: 50px;
+
+        padding-right: 20px;
+
+        &-item {
+            margin-bottom: 22px;
+        }
+
+        &-icon {
+            position: relative;
+            width: 22px;
+            height: 22px;
+            color: #158269;
+            margin: 0 auto;
+            margin-bottom: 2px;
+
+            &:after {
+                content: "";
+                
+                position: absolute;
+                transform: translate(100%, -50%);
+                top: 50%;
+                right: -20px;
+
+                width: 8px;
+                height: 8px;
+                background: #d3d3d3;
+                border-radius: 50%;
+
+                @include media('<=mobile') {
+                    background: #fff;
+                }
+            }
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &-date {
+            transition: all var(--transition) linear;
+            color: var(--card-list);
+            font-size: 1.1rem;
+            font-weight: 500;
+            line-height: 1;
+
+            @include truncate;
+        }
+    }
+
+    &__divider {
+        width: 2px;
+        height: 170px;
+        margin-top: 10px;
+        background: #e8e8e8;
+
+        @include media('<=mobile') {
+            background: #fff;
+        }
+    }
+
+    &__main {
+        min-width: 0;
+        flex: 1;
+        padding-top: 2px;
+        padding-left: 20px;
+        &-item {
+            margin-bottom: 13px;
+        }
+
+        &-price {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 5px;
+
+            @include truncate;
+        }
+
+        &-title {
+            display: block;
+            font-size: 1.4rem;
+            line-height: 1.1;
+            font-weight: 600;
+            color: var(--card-text);
+            padding-right: 10px;
+            transition: all var(--transition) linear;
+            @include truncate;
+        }
+
+        &-amount {
+            @include truncate;
+            display: block;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            color: #479E8B;
+            font-weight: 600;
+            flex-shrink: 0;
+            max-width: 50%;
+        }
+
+        &-description {
+            font-size: 1.2rem;
+            line-height: 1.2;
+            color: var(--card-list);
+            font-weight: 500;
+            padding-right: 5px;
+            transition: all var(--transition) linear;
+            @include line-clamp(2);
+        }
+    }
+
+    &__total {
+        max-width: 400px;
+        position: absolute;
+        bottom: -27px;
+        right: 30px;
+        z-index: 2;
+        letter-spacing: .3px;
+
+        transition: all var(--transition) linear;
+        background: var(--benefit-data-background);
+        padding: 27px;
+        border-radius: 8px;
+        box-shadow: 0px 20px 25px -5px rgba(15, 23, 42, 0.04), 0px 8px 10px -6px rgba(15, 23, 42, 0.04);
+        filter: drop-shadow(0px 0px 2px rgba(15, 23, 42, 0.2));
+    
+        @include media('<=desktop') {
+            position: static;
+        }
+
+        @include media('<=desktop') {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 100%;
+            margin-right: 0;
+            text-align: center;
+        }
+        
+        @include media('<=mobile') {
+            border-radius: 0;
+            filter: none;
+            box-shadow: none;
+            margin-top: 0;
+            border-top: 1px solid silver;
+            padding: 14px;
+        }
+
+        &-descr {
+            @include truncate;
+
+            color: var(--card-list);
+            font-size: 1.4rem;
+            margin-bottom: 19px;
+            font-weight: 500;
+            transition: all var(--transition) linear;
+            letter-spacing: 0.2px;
+
+            @include media('<=mobile') {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+        }
+
+        &-price {
+            @include truncate;
+
+            color: var(--card-text);
+            transition: all var(--transition) linear;
+            font-size: 4.2rem;
+
+            @include media('<=mobile') {
+                font-size: 2.8rem;
+            }
+        }
+    }
+}
