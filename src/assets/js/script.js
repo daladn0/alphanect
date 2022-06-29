@@ -111,8 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   burger.addEventListener("click", function (e) {
     this.classList.toggle("active");
-    headerMobileNav.classList.toggle("active");
-    header.classList.toggle("active-important");
+    header.classList.toggle("expanded");
   });
 
   productsTabs.forEach((tab) => {
@@ -152,10 +151,10 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
 
       // hide mobile nav if link was clicked within it
-      const isMobileLink = this.closest(".header__mobile-nav");
+      const isHeaderLink = this.closest(".header");
 
-      if (!!isMobileLink) {
-        headerMobileNav.classList.remove("active");
+      if (!!isHeaderLink) {
+        header.classList.remove("expanded");
         burger.classList.remove("active");
       }
 

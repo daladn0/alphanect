@@ -19,11 +19,10 @@
   <body id="body">
     <header class="header" id="header">
       <div class="header__inner">
-        <a href="#body" class="header__logo" tabindex="0">
+        <a href="#body" class="header__logo header__item header__item-1" tabindex="0">
           <img src="./assets/images/logo.png" alt="Alpanect" />
         </a>
-
-        <nav class="header__nav">
+        <nav class="header__nav header__item header__item-2">
           <ul class="header__list">
             <li class="header__list-item">
               <a href="#about" class="header__list-link scrolling-link">About us</a>
@@ -40,45 +39,20 @@
               <a href="#contacts" class="header__list-link scrolling-link">Contact</a>
             </li>
           </ul>
-          <button class="header__theme-button" id="theme-swapper" aria-label="swap theme" title="swap theme">
-            <svg viewBox="0 0 24 24">
-              <use xlink:href="./assets/images/sprite.svg#theme" />
-            </svg>
-          </button>
-          <button class="header__main-button main-button main-button-dark">
-            Book a demo
-          </button>
-          <button type="button" id="burger" class="header__burger" aria-label="burger menu" title="burger-menu">
-            <span class="header__burger-line"></span>
-            <span class="header__burger-line"></span>
-            <span class="header__burger-line"></span>
-          </button>
         </nav>
-      </div>
-      <div class="header__mobile-nav" id="mobile-nav">
-        <div class="container">
-          <ul class="header__list">
-            <li class="header__list-item">
-              <a href="#about" class="header__list-link scrolling-link">About us</a>
-            </li>
-            <li class="header__list-item">
-              <a href="#solutions" class="header__list-link scrolling-link"
-                >Platform Solutions</a
-              >
-            </li>
-            <li class="header__list-item">
-              <a href="#careers" class="header__list-link scrolling-link">Careers</a>
-            </li>
-            <li class="header__list-item">
-              <a href="#contacts" class="header__list-link scrolling-link">Contact</a>
-            </li>
-            <li class="header__list-item">
-              <button class="header__main-button main-button main-button-dark">
-                Book a demo
-              </button>
-            </li>
-          </ul>
-        </div>
+        <button class="header__theme-button header__item header__item-3" id="theme-swapper" aria-label="swap theme" title="swap theme">
+          <svg viewBox="0 0 24 24">
+            <use xlink:href="./assets/images/sprite.svg#theme" />
+          </svg>
+        </button>
+        <button class="header__main-button main-button main-button-dark header__item header__item-4">
+          Book a demo
+        </button>
+        <button type="button" id="burger" class="header__burger header__item header__item-5" aria-label="burger menu" title="burger-menu">
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+        </button>
       </div>
     </header>
 

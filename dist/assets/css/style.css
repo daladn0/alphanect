@@ -558,7 +558,27 @@ body.dark {
 
 @media(max-width: 991px) {
     .header__list {
-        display: none
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        padding: 10px 24px;
+        background: var(--header-background);
+        border-top: 1px solid #e9e9e9
+    }
+}
+
+@media(max-width: 568px) {
+    .header__list {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        padding-bottom: 60px
+    }
+
+    .header__list .header__list-item {
+        margin-top: 10px
     }
 }
 
@@ -656,7 +676,10 @@ body.dark {
 
 @media(max-width: 568px) {
     .header__main-button {
-        display: none
+        position: absolute;
+        top: 215px;
+        left: 24px;
+        width: calc(100% - 48px)
     }
 }
 
